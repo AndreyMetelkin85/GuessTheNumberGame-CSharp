@@ -4,7 +4,6 @@ public class VerificationResult
 {
     internal string DataVerification()
     {
-        
         var playerData = new Player();
         var playerName = playerData.Name();
         var userNumber = playerData.UserNumberEntry();
