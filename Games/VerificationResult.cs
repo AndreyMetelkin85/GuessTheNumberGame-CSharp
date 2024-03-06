@@ -14,8 +14,11 @@ public class VerificationResult
         {
             var userNumber = playerData.UserNumberEntry();
             count++;
+            
+            if (userNumber < 0 | userNumber > 99)
+                Console.WriteLine($"{playerName}, вы ввели не кореткное число, число должно быть от 0 до 99.");
 
-            if (userNumber < numberGenerator)
+            else if (userNumber < numberGenerator)
             {
                 Console.WriteLine(
                     $"{playerName}, твоё число {userNumber} и оно меньше, чем задумал компьютер. Пробуй ещё раз.");
